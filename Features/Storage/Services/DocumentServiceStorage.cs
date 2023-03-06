@@ -1,6 +1,8 @@
 ﻿using DocumentService.Features.Storage.Models;
 using DocumentService.Features.Storage.MongoDbClient;
 using DocumentService.Features.Storage.Services.Interfaces;
+using MongoDB.Driver;
+using System.Linq;
 
 namespace DocumentService.Features.Storage.Services
 {
@@ -10,8 +12,9 @@ namespace DocumentService.Features.Storage.Services
         {
             if (pdfDocumentModel == null) return;
 
-            await DocumentServiceCosmosDbConnection.DocumentStorageCollection.InsertOneAsync(pdfDocumentModel);
-            
+            var filter = Builders<DocumentStorageModel>.Filter.Where(x => x.DocumentNumber == pdfDocumentModel.DocumentNumber);
+            await DocumentServiceCosmosDbConnection.DocumentStorageCollection.ReplaceOneAsync(filter, pdfDocumentModel, new ReplaceOptions {  IsUpsert = true });
+
         }
 
     }
