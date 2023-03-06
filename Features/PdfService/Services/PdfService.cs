@@ -2,8 +2,8 @@
 using PdfSharpCore.Drawing;
 using DocumentService.Features.DocumentService.Models;
 using DocumentService.Features.PdfService.Services.Interfaces;
-using DocumentService.Features.Storage.Services.Interfaces;
-using DocumentService.Features.Storage.Models;
+using DocumentService.Features.StorageService.Services.Interfaces;
+using DocumentService.Features.StorageService.Models;
 
 namespace DocumentService.Features.PdfService.Services
 {

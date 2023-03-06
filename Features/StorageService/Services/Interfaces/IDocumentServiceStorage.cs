@@ -1,6 +1,6 @@
-﻿using DocumentService.Features.Storage.Models;
+﻿using DocumentService.Features.StorageService.Models;
 
-namespace DocumentService.Features.Storage.Services.Interfaces
+namespace DocumentService.Features.StorageService.Services.Interfaces
 {
     public interface IDocumentServiceStorage
     {

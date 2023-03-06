@@ -1,9 +1,9 @@
-﻿using DocumentService.Features.Storage.Models;
-using DocumentService.Features.Storage.MongoDbClient;
-using DocumentService.Features.Storage.Services.Interfaces;
+﻿using DocumentService.Features.StorageService.Models;
+using DocumentService.Features.StorageService.MongoDbClient;
+using DocumentService.Features.StorageService.Services.Interfaces;
 using MongoDB.Driver;
 
-namespace DocumentService.Features.Storage.Services
+namespace DocumentService.Features.StorageService.Services
 {
     public class DocumentServiceStorage : IDocumentServiceStorage
     {

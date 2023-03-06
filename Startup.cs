@@ -1,4 +1,4 @@
-﻿using DocumentService.Features.Storage.MongoDbClient;
+﻿using DocumentService.Features.StorageService.MongoDbClient;
 
 public class Startup
 {

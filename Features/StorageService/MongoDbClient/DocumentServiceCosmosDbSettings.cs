@@ -1,4 +1,4 @@
-﻿namespace DocumentService.Features.Storage.MongoDbClient
+﻿namespace DocumentService.Features.StorageService.MongoDbClient
 {
     public static class DocumentServiceCosmosDbSettings
     {

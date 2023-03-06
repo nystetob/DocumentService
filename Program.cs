@@ -1,7 +1,7 @@
 using DocumentService.Features.PdfService.Services.Interfaces;
 using DocumentService.Features.PdfService.Services;
-using DocumentService.Features.Storage.Services.Interfaces;
-using DocumentService.Features.Storage.Services;
+using DocumentService.Features.StorageService.Services.Interfaces;
+using DocumentService.Features.StorageService.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 

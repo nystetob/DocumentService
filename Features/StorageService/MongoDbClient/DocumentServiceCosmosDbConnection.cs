@@ -1,8 +1,8 @@
-﻿using DocumentService.Features.Storage.Models;
+﻿using DocumentService.Features.StorageService.Models;
 using MongoDB.Driver;
 using System.Security.Authentication;
 
-namespace DocumentService.Features.Storage.MongoDbClient
+namespace DocumentService.Features.StorageService.MongoDbClient
 {
         public static class DocumentServiceCosmosDbConnection
         {

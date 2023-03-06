@@ -1,6 +1,6 @@
 ﻿using MongoDB.Bson.Serialization.Attributes;
 
-namespace DocumentService.Features.Storage.Models
+namespace DocumentService.Features.StorageService.Models
 {
     [BsonIgnoreExtraElements]
     public class DocumentStorageModel
