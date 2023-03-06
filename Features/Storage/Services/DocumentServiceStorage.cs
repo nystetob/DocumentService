@@ -2,7 +2,6 @@
 using DocumentService.Features.Storage.MongoDbClient;
 using DocumentService.Features.Storage.Services.Interfaces;
 using MongoDB.Driver;
-using System.Linq;
 
 namespace DocumentService.Features.Storage.Services
 {
