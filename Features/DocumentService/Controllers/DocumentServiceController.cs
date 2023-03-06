@@ -15,9 +15,9 @@ namespace DocumentService.Features.DocumentService.Controllers
         }
 
         [HttpGet(Name = "GetDocument")]
-        public IActionResult Get([FromQuery] DocumentModel document)
+        public async Task<IActionResult> GetAsync([FromQuery] DocumentModel document)
         {
-            var fileContent = _pdfService.GeneratePdf(document);
+            var fileContent = await _pdfService.GeneratePdfAsync(document);
 
             return File(fileContent, "application/octet-stream", $"{document.DocumentNumber}.pdf");
         }

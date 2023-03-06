@@ -4,6 +4,6 @@ namespace DocumentService.Features.PdfService.Services.Interfaces
 {
     public interface IPdfService
     {
-        byte[] GeneratePdf(DocumentModel model);
+        Task<byte[]> GeneratePdfAsync(DocumentModel model);
     }
 }

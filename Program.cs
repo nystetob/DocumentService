@@ -1,12 +1,16 @@
 using DocumentService.Features.PdfService.Services.Interfaces;
 using DocumentService.Features.PdfService.Services;
+using DocumentService.Features.Storage.Services.Interfaces;
+using DocumentService.Features.Storage.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
+var startup = new Startup(builder.Configuration);
 // Add services to the container.
 
 builder.Services.AddControllers();
 builder.Services.AddSingleton<IPdfService, PdfService>();
+builder.Services.AddSingleton<IDocumentServiceStorage, DocumentServiceStorage>();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();

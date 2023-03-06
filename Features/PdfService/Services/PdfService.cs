@@ -2,12 +2,20 @@
 using PdfSharpCore.Drawing;
 using DocumentService.Features.DocumentService.Models;
 using DocumentService.Features.PdfService.Services.Interfaces;
+using DocumentService.Features.Storage.Services.Interfaces;
+using DocumentService.Features.Storage.Models;
 
 namespace DocumentService.Features.PdfService.Services
 {
     public class PdfService : IPdfService
     {
-        public byte[] GeneratePdf(DocumentModel documentModel)
+        private readonly IDocumentServiceStorage _documentServiceStorage;
+
+        public PdfService(IDocumentServiceStorage documentServiceStorage)
+        {
+            _documentServiceStorage = documentServiceStorage;
+        }
+        public async Task<byte[]> GeneratePdfAsync(DocumentModel documentModel)
         {
             var document = new PdfDocument();
             document.Info.Title = "GeneratedPdf";
@@ -23,8 +31,17 @@ namespace DocumentService.Features.PdfService.Services
                 fileContents = stream.ToArray();
             }
 
+            await _documentServiceStorage.InsertPdfDocumentItem(new DocumentStorageModel
+            {
+                DocumentNumber = documentModel.DocumentNumber.ToString(),
+                FileType = "pdf",
+                FileContent = fileContents
+            });
+
             return fileContents;
 
         }
+
+
     }
 }
