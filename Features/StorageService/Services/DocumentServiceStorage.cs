@@ -7,7 +7,7 @@ namespace DocumentService.Features.StorageService.Services
 {
     public class DocumentServiceStorage : IDocumentServiceStorage
     {
-        public async Task InsertPdfDocumentItem(DocumentStorageModel pdfDocumentModel)
+        public async Task StorePdfDocument(DocumentStorageModel pdfDocumentModel)
         {
             if (pdfDocumentModel == null) return;
 

@@ -4,7 +4,7 @@ namespace DocumentService.Features.StorageService.Services.Interfaces
 {
     public interface IDocumentServiceStorage
     {
-        Task InsertPdfDocumentItem(DocumentStorageModel pdfDocuments);
+        Task StorePdfDocument(DocumentStorageModel pdfDocuments);
 
     }
 }
