@@ -1,7 +1,7 @@
 # DocumentService
 
 ## Getting started
-If you wish to run the API, use can use the following commands after installing Docker Desktop:
+If you wish to run the Microservice, you can use the following commands after installing Docker Desktop:
 
 ```bash
 docker build -t documentservice .
