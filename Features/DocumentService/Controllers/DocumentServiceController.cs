@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace DocumentService.Features.DocumentService.Controllers
 {
-    //TODO: AddSecurity
+    //TODO: AddSecurity, for example validate client with a JwtToken
     [ApiController]
     [Route("[controller]")]
     public class DocumentServiceController : Controller

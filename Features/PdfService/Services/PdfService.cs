@@ -4,7 +4,6 @@ using DocumentService.Features.DocumentService.Models;
 using DocumentService.Features.PdfService.Services.Interfaces;
 using DocumentService.Features.StorageService.Services.Interfaces;
 using DocumentService.Features.StorageService.Models;
-using Microsoft.AspNetCore.Mvc;
 
 namespace DocumentService.Features.PdfService.Services
 {
